@@ -23,7 +23,7 @@ export const InputPhone = () => {
                             className='focus-within:opacity-100 outline-none bg-transparent flex flex-col w-full'
                             mask={'+{55} {00} 0 0000-0000'}
                             radix='.'
-                            value={'{+}55 (DDD) 9 9999{-}9999'}
+                            value={'{+} (DDD) 9 9999{-}9999'}
                             ref={ref}
                             inputRef={inputPhoneRef}
                         >
