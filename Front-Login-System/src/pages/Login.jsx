@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 
 import { Button } from '../components/Form/Button';
@@ -8,6 +10,20 @@ import { UserAvatar } from '../components/Form/UserAvatar';
 import { Text } from '../components/util/Text';
 
 export const Login = () => {
+    const [form, setForm] = useState({user: '', password: ''});
+
+    const changeForm = (e) => {
+        const {name, value} = e.target
+
+        setForm({...form, [name]: value})
+    }
+
+    const submiteForm = (e) => {
+        e.preventDefault()
+
+        console.log(form)
+    }
+
     const signUp =
         <Link 
             to='/createaccount'
@@ -32,16 +48,29 @@ export const Login = () => {
                 2xl:w-[20vw]
                 shadow-white'>
                 <UserAvatar />
-                <form className='flex flex-col gap-4 m-auto items-stretch w-full max-w-sm mt-8'>
-                    <label htmlFor='email' className='flex flex-col px-4'>
+                <form onSubmit={submiteForm} className='flex flex-col gap-4 m-auto items-stretch w-full max-w-sm mt-8'>
+                    <label onChange={changeForm} htmlFor='email' className='flex flex-col px-4'>
                         <div id='login' className='flex flex-col'>
                             <Text className='text-purple-50 hover:text-purple-100 font-bold text-[24px]'>Login</Text>
                             <Text className='text-purple-50 text-[12px] font-light mb-4'>Please sign in to continue</Text>
+                            </div>
+                            <div className='flex-col items-stretch w-full'>
+                                <InputEmail
+                                value={form.user}
+                                name='user'
+                                id='user'
+                                type='email'
+                                placeholder="Type your name"
+                            />
                         </div>
-                       <InputEmail />
                     </label>
-                    <div className='px-4'>
-                        <InputPassword />
+                    <div onChange={changeForm} className='flex flex-col items-stretch w-full px-4'>
+                        <InputPassword value={form.password}
+                            name='password'
+                            type='password'
+                            id='password'
+                            placeholder="Type your password"
+                        />
                     </div>
                     <div className='mt-4 text-center'>
                         <Button type='submit' text='LOGIN'/>

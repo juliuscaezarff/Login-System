@@ -36,12 +36,10 @@ const StyledFallback = styled(AvatarPrimitive.Fallback, {
   fontWeight: 500,
 });
 
-// Exports
 export const Avatar = StyledAvatar;
 export const AvatarImage = StyledImage;
 export const AvatarFallback = StyledFallback;
 
-// Your app...
 const Flex = styled('div', { display: 'flex' });
 
 export const UserAvatar = () => (
