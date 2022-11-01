@@ -50,7 +50,7 @@ export const Login = () => {
                         </Text>
                     </div>
                     <div className='text-center py-1'>
-                        <Text className='text-center text-[8px] text-purple-50'>Already have a account? {signUp}</Text>
+                        <Text className='text-center text-[8px] text-purple-50'>Don't have a account? {signUp}</Text>
                     </div>
                 </form>
             </div>
