@@ -16,19 +16,17 @@ export const About = () => {
         </Link>
 
     return (
-        <div className="bg-no-repeat bg-cover bg-center bg-bubble w-screen h-screen">
-            <div className='p-3'>
-                <LoggedOutNavBar />
+        <div className="bg-gradient-to-r relative from-black to-purple-900 w-screen h-screen">
+            <LoggedOutNavBar />
+            <div className='w-[80vw] text-center m-auto py-[28vh]'>
+                <Text className='
+                    text-center text-[15px]
+                    sm:text-[25px]
+                     text-purple-50
+                '>
+                    Please {login} to continue with us :)
+                </Text>
             </div>
-                <div className='w-[80vw] text-center m-auto py-[28vh]'>
-                    <Text className='
-                        text-center text-[15px]
-                        sm:text-[25px]
-                         text-purple-50
-                    '>
-                        Please {login} to continue with us :)
-                    </Text>
-                </div>
         </div>
     )
 }

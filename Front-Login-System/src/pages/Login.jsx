@@ -36,26 +36,18 @@ export const Login = () => {
         </Link>
 
     return (
-        <div className="bg-no-repeat bg-cover bg-center bg-bubble w-screen h-screen">
-            <div className='p-3'>
+        <div className="bg-gradient-to-r relative from-black to-purple-900 w-screen h-screen">
+            <div className='w-full h-full z-50'>
                 <LoggedOutNavBar />
-            </div>
-            <div className='
-                w-[85vw] h-[85vh] m-auto bg-black bg-opacity-75 rounded-3xl shadow-sm
-                sm:w-[45vw] 
-                md:w-[55vw]
-                lg:w-[35vw]
-                2xl:w-[20vw]
-                shadow-white'>
                 <UserAvatar />
                 <form onSubmit={submiteForm} className='flex flex-col gap-4 m-auto items-stretch w-full max-w-sm mt-8'>
                     <label onChange={changeForm} htmlFor='email' className='flex flex-col px-4'>
-                        <div id='login' className='flex flex-col'>
+                        <div id='login' className='flex flex-col z-50'>
                             <Text className='text-purple-50 hover:text-purple-100 font-bold text-[24px]'>Login</Text>
                             <Text className='text-purple-50 text-[12px] font-light mb-4'>Please sign in to continue</Text>
-                            </div>
-                            <div className='flex-col items-stretch w-full'>
-                                <InputEmail
+                        </div>
+                        <div className='z-50 flex-col items-stretch w-full'>
+                            <InputEmail
                                 value={form.user}
                                 name='user'
                                 id='user'
@@ -64,26 +56,26 @@ export const Login = () => {
                             />
                         </div>
                     </label>
-                    <div onChange={changeForm} className='flex flex-col items-stretch w-full px-4'>
-                        <InputPassword value={form.password}
+                    <div onChange={changeForm} className='z-50 flex flex-col items-stretch w-full px-4'>
+                        <InputPassword
+                            value={form.password}
                             name='password'
                             type='password'
                             id='password'
                             placeholder="Type your password"
                         />
                     </div>
-                    <div className='mt-4 text-center'>
+                    <div className='mt-4 text-center z-50'>
                         <Button type='submit' text='LOGIN'/>
                         <Text className='hover:text-purple-50 text-center text-[10px] text-purple-400'>
                             <a href="#">Forget Password?</a>
                         </Text>
                     </div>
-                    <div className='text-center py-1'>
-                        <Text className='text-center text-[8px] text-purple-50'>Don't have a account? {signUp}</Text>
+                    <div className='z-50 text-center py-1'>
+                        <Text className='z-50 text-center text-[8px] text-purple-50'>Don't have a account? {signUp}</Text>
                     </div>
                 </form>
             </div>
-
         </div>
     )
 }
