@@ -10,6 +10,7 @@ export const InputConfirmPassword = () => {
                     <Lock />
                     </TextInput.Icon>
                     <TextInput.Input
+                        name='confirmPassword'
                         type='password'
                         id='confirm-password'
                         placeholder="Confirm your password"

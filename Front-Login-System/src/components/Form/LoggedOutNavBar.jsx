@@ -21,19 +21,19 @@ const Text = styled('div', {
 });
 
 export const LoggedOutNavBar = () => (
-  <Box className='text-purple-50 w-full max-w-[300px]'>
+  <Box className='text-purple-50 w-full max-w-[300px] '>
     <Text>Login System</Text>
     <Separator />
     <Flex css={{ height: 20, alignItems: 'center' }}>
-      <Text className='m-2 hover:text-purple-400 cursor-pointer'>
+      <Text className='m-2 z-50 hover:text-purple-400 cursor-pointer'>
         <Link to='/'> Home </Link> 
       </Text>
       <Separator decorative orientation="vertical" />
-      <Text className='m-2 hover:text-purple-400 cursor-pointer'>
+      <Text className='m-2 z-50 hover:text-purple-400 cursor-pointer'>
         <Link to='/about'> About </Link>
       </Text>
       <Separator decorative orientation="vertical"  />
-      <Text className='m-2 hover:text-purple-400 cursor-pointer'>
+      <Text className='m-2 z-50 hover:text-purple-400 cursor-pointer'>
       <Link to='/contact'> Contact </Link>
       </Text>
     </Flex>
