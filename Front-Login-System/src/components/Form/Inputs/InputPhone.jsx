@@ -10,24 +10,22 @@ export const InputPhone = () => {
     const inputPhoneRef = useRef(null)
 
     return (
-        <form className='focus-within:opacity-100 opacity-25 flex flex-col items-stretch w-full'>
-            <label htmlFor='phone' className='flex flex-col gap-3 text-[12px]'>
-                <TextInput.Root className='bg-black'>
-                    <TextInput.Icon>
-                        <Phone />
-                    </TextInput.Icon>
-                        <IMaskInput
-                            name='phone'
-                            className='focus-within:opacity-100 outline-none bg-transparent flex flex-col w-full'
-                            mask={'+{55} {00} 0 0000-0000'}
-                            radix='.'
-                            ref={ref}
-                            inputRef={inputPhoneRef}
-                            placeholder='Type a phone number'
-                        >
-                    </IMaskInput>
-                </TextInput.Root>
-            </label>
-        </form>
+        <label htmlFor='phone' className='focus-within:opacity-100 opacity-25 items-stretch w-full flex flex-col gap-3 text-[12px]'>
+            <TextInput.Root className='bg-black'>
+                <TextInput.Icon>
+                    <Phone />
+                </TextInput.Icon>
+                    <IMaskInput
+                        name='phone'
+                        className='focus-within:opacity-100 outline-none bg-transparent flex flex-col w-full'
+                        mask={'+{55} {00} 0 0000-0000'}
+                        radix='.'
+                        ref={ref}
+                        inputRef={inputPhoneRef}
+                        placeholder='Type a phone number'
+                    >
+                </IMaskInput>
+            </TextInput.Root>
+        </label>
     )
 }

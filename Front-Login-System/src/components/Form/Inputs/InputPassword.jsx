@@ -2,22 +2,18 @@ import { TextInput } from './TextInput';
 import { Lock } from 'phosphor-react'
 
 export const InputPassword = () => {
-
-   
     return(
-        <form className='focus-within:opacity-100 opacity-25 flex flex-col items-stretch w-full'>
-            <label htmlFor='password' className='flex flex-col gap-3 '>
-                <TextInput.Root >
-                    <TextInput.Icon>
-                        <Lock />
-                    </TextInput.Icon>
-                    <TextInput.Input
-                        name='password'
-                        id='password'
-                        type='password'
-                        placeholder="Type your password" />
-                </TextInput.Root>
-            </label>
-        </form>
+        <label htmlFor='password' className='flex focus-within:opacity-100 opacity-25 items-stretch w-full flex-col gap-3 '>
+            <TextInput.Root >
+                <TextInput.Icon>
+                    <Lock />
+                </TextInput.Icon>
+                <TextInput.Input
+                    name='password'
+                    id='password'
+                    type='password'
+                    placeholder="Type your password" />
+            </TextInput.Root>
+        </label>
     )
 }

@@ -14,27 +14,30 @@ export const Separator = StyledSeparator;
 const Box = styled('div', {});
 const Flex = styled('div', { display: 'flex' });
 const Text = styled('div', {
-  fontSize: 15,
   fontFamily: 'Cinzel',
   fontWeight: '500',
   lineHeight: '20px',
 });
 
 export const LoggedOutNavBar = () => (
-  <Box className='text-purple-50 w-full max-w-[300px] '>
+  <Box className='text-purple-50 w-full sm:max-w-[400px] '>
     <Text>Login System</Text>
     <Separator />
     <Flex css={{ height: 20, alignItems: 'center' }}>
-      <Text className='m-2 z-50 hover:text-purple-400 cursor-pointer'>
+      <Text className='m-2 z-50 transition-all hover:text-purple-400 hover:border-b-2 hover:border-purple-50 text-[10px] sm:text-[12px]'>
         <Link to='/'> Home </Link> 
       </Text>
       <Separator decorative orientation="vertical" />
-      <Text className='m-2 z-50 hover:text-purple-400 cursor-pointer'>
+      <Text className='m-2 z-50 transition-all hover:text-purple-400 hover:border-b-2 hover:border-purple-50 text-[10px] sm:text-[12px]'>
         <Link to='/about'> About </Link>
       </Text>
       <Separator decorative orientation="vertical"  />
-      <Text className='m-2 z-50 hover:text-purple-400 cursor-pointer'>
+      <Text className='m-2 z-50 transition-all hover:text-purple-400 hover:border-b-2 hover:border-purple-50 text-[10px] sm:text-[12px]'>
       <Link to='/contact'> Contact </Link>
+      </Text>
+      <Separator decorative orientation="vertical"  />
+      <Text className='m-2 z-50 transition-all hover:text-purple-400 hover:border-b-2 hover:border-purple-50 text-[10px] sm:text-[12px]'>
+      <Link to='/createaccount'> Create Account </Link>
       </Text>
     </Flex>
   </Box>
