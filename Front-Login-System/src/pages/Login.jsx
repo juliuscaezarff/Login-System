@@ -66,7 +66,7 @@ export const Login = () => {
                         />
                     </div>
                     <div className='mt-4 text-center z-50'>
-                        <Button type='submit' text='LOGIN'/>
+                        <Button text='LOGIN'/>
                         <Text className='hover:text-purple-50 text-center text-[10px] text-purple-400'>
                             <a href="#">Forget Password?</a>
                         </Text>

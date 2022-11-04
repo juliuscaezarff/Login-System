@@ -14,3 +14,4 @@ export const Button = ({text, type}) => {
         </div>
     )
 }
+
